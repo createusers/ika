@@ -11,7 +11,7 @@ const element = document.querySelectorAll(
 
 //map
 textDiv = [...text.textContent]
-  .map(a => `<div class="abjad">${a}</div>`)
+  .map((a) => `<div class="abjad"> ${a}</div>`)
   .join("");
 text.innerHTML = textDiv;
 const textAnim = document.querySelectorAll(".abjad");
@@ -25,7 +25,7 @@ let clk = 1,
     "rgba(251, 89, 183, 0.835)",
     "rgba(251, 89, 89, 0.835)",
     "rgba(89, 246, 251, 0.835)",
-    "rgba(237, 89, 251, 0.835)"
+    "rgba(237, 89, 251, 0.835)",
   ];
 conKado.addEventListener("click", () => {
   kado.style.pointerEvents = "none";
@@ -63,7 +63,7 @@ conKado.addEventListener("click", () => {
           if (inCl < aTx.length) {
             aTx[inCl].style.color = randColor[rand(randColor.length)];
             if (inCl > 5 && inCl < aTx.length - 5) {
-              aTx[inCl].style.fontSize = "2.5rem";
+              aTx[inCl].style.fontSize = "3rem";
               setTimeout(() => {
                 aTx[inCl].style.fontSize = "2.3rem";
               }, 100);
@@ -73,7 +73,7 @@ conKado.addEventListener("click", () => {
           if (inTx < aTx.length) {
             aTx[inTx].style.color = randColor[rand(randColor.length - 1)];
             aTx[inTx].style.animationPlayState = "running";
-            aTx[inTx].style.fontSize = "2.3rem";
+            aTx[inTx].style.fontSize = "2.7rem";
             aTx[inTx].style.opacity = "1";
             inTx++;
           }
